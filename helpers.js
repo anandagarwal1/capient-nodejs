@@ -2,7 +2,7 @@
 
 const fs = require('fs'),
     path = require('path'),
-    config = require('config');
+    config = require('./config/prod.json');
 
 exports.displayConfigSummary = function () {
     console.log('\t[environment]');

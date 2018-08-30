@@ -1,4 +1,4 @@
-//process.env.NODE_ENV = 'prod';
+process.env.NODE_ENV = 'prod';
 
 const express = require('express'),
     path = require('path'),
@@ -8,7 +8,7 @@ const express = require('express'),
     contentDisposition = require('content-disposition'),
     finalhandler = require('finalhandler'),
     fs = require('fs'),
-    config = require('config');
+    config = require('./config/prod.json');
 
 const helpers = require('./helpers'),
     db = require('./db-manager'),
@@ -63,7 +63,7 @@ app.use((err, req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-    res.send("Invalid page");
+    res.send("Server Started...");
 })
 
 
