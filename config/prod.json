@@ -1,0 +1,54 @@
+{
+    "name": "production",
+    "server": {
+        "api": "/api/v1/",
+        "port": 9876,
+        "bodyParser": {
+            "limit": "80mb",
+            "isExtended": true
+        },
+        "directory": {
+            "public": "public",
+            "upload": "uploads",
+            "temp": "temp"
+        }
+    },
+    "ipstack": {
+        "accessKey": "e9044ca1bf68c7866b45d105b67642a3"
+    },
+    "db": {
+        "host": "wwtc.documents.azure.com",
+        "username": "wwtc",
+        "port": "10255",
+        "pass": "QvtV5pASTFxylT9QzbjgK1B7qvg7vaVYSc1iYSWY03FKqCPzfaBAZXGKOYvN6N3ngZTk6QR07xKFr4Blej9tYw==",
+        "name": "wwtc_dev",
+        "ssl": "true"
+    },
+    "msft": {
+        "speech": {
+            "subscriptionKey": "918223d9542f424e8bb4c8a40e5977d3",
+            "translateKey": "575b91bb5ea24e5a928b634087df1f00"
+        }
+    },
+    "ndev": {
+        "appID": "NMDPTRIAL_jeffwilliams_worldwidetechconnections_com20171103125149",
+        "appKey": "2d2e43498fe2d54e28b1377a0c53b13947c2ddfea743626e6c8ae11a2c3d20596b63a2fb4577496d2980e735d3986e1b5b4b19028e7c70fb065115328e358bfa",
+        "dictationHeaders": {
+            "Content-Type": "audio/x-wav;codec=pcm;bit=16;rate=16000",
+            "Accept": "text/plain",
+            "Accept-Topic": "Dictation"
+        },
+        "customReqID": "rs_wwtc_test"
+    },
+    "gcloud": {
+        "projectId": "wwtc-core",
+        "keyFilename": "gcloud.json"
+    },
+    "sendEmail": {
+        "host": "smtp.gmail.com",
+        "port": "465",
+        "user": "webashlardevelopment@gmail.com",
+        "pass": "Webashlar123",
+        "from": "Webashlar Development <webashlardevelopment@gmail.com>"
+    }
+}
