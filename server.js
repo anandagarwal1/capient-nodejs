@@ -1,4 +1,4 @@
-//process.env.NODE_ENV = 'prod';
+process.env.NODE_ENV = 'prod';
 
 const express = require('express'),
     path = require('path'),
@@ -8,7 +8,7 @@ const express = require('express'),
     contentDisposition = require('content-disposition'),
     finalhandler = require('finalhandler'),
     fs = require('fs'),
-    config = require('config');
+    config = require('./config/prod.json');
 
 const helpers = require('./helpers'),
     db = require('./db-manager'),
@@ -99,7 +99,9 @@ exports.socketEmit = (eventName, eventData, room) => {
     io.in(room).emit(eventName, eventData);
 };
 
-server.listen(config.server.port, function listening() {
+var port = process.env.PORT || 1337;
+
+server.listen(port, function listening() {
     console.log('\t  listening...');
    //  addOrganizationByNameTestFunction('epic', 'Epic Customer Chat')
 });

@@ -1,6 +1,6 @@
 // process.env.NODE_ENV = 'prod';
 
-const config = require('config'),
+const config = require('./config/prod.json'),
     mongoose = require('mongoose');
 
 const Namespace = require('./models/namespace'),
