@@ -1,13 +1,4 @@
-var express = require('express'),
-    path = require('path'),
-    http = require('http'),
-    bodyParser = require('body-parser'),
-    serveStatic = require('serve-static'),
-    contentDisposition = require('content-disposition'),
-    finalhandler = require('finalhandler'),
-    fs = require('fs'),
-    config = require('config');
-
+var http = require('http');
 
 var server = http.createServer(function (request, response) {
 
