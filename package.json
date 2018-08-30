@@ -12,7 +12,7 @@
     "@google-cloud/translate": "^1.1.0",
     "bcrypt": "^1.0.3",
     "config": "^1.30.0",
-    "express": "^4.16.2",
+    "express": "^4.16.3",
     "finalhandler": "^1.1.0",
     "forwarded-for": "^1.0.1",
     "fs": "0.0.1-security",
