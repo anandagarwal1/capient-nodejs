@@ -1,21 +1,22 @@
 // process.env.NODE_ENV = 'prod';
 
-const config = require('./config/prod.json'),
+const config = require('config'),
     mongoose = require('mongoose');
 
 const Namespace = require('./models/namespace'),
-    UserProfile  =require('./models/user-profile'),
-     User = require('./models/user'),
+    UserProfile = require('./models/user-profile'),
+    User = require('./models/user'),
     server = require('./server');
- // const url = 'mongodb://localhost:27017/test';
+// const url = 'mongodb://localhost:27017/test';
 
- const url = `mongodb://${config.db.host}:${config.db.port}/${config.db.name}?ssl=${config.db.ssl}`;
+const url = 'mongodb://capient.documents.azure.com:10255/wwtc_dev?ssl=true';
+// const url = `mongodb://${config.db.host}:${config.db.port}/${config.db.name}?ssl=${config.db.ssl}`;
 // var url = `mongodb://${config.db.username}:${config.db.pass}@${config.db.host}:${config.db.port}/${config.db.name}?ssl=${config.db.ssl}&replicaSet=${config.db.replicaSet}`;
 
 var mongooseOptions = {
     useMongoClient: true,
-    user: config.db.username,
-    pass: config.db.pass,
+    user: config.azuredb.username,
+    pass: config.azuredb.pass,
     autoIndex: false, // Don't build indexes
     reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
     reconnectInterval: 500, // Reconnect every 500ms
