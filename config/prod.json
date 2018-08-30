@@ -50,5 +50,9 @@
         "user": "webashlardevelopment@gmail.com",
         "pass": "Webashlar123",
         "from": "Webashlar Development <webashlardevelopment@gmail.com>"
+    },
+    "azuredb": {
+        "username": "capient",
+        "pass": "nLVFRjQUIp3fiimfiYwkAfMca2Cdm13Z4FyFgBv9gjsy6GQxSn4TnPJGSrUpJUOz7bh2JIitgvfDNMlsChGiDg=="
     }
 }
