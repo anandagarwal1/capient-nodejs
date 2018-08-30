@@ -1,4 +1,4 @@
-const express = require('express'),
+var express = require('express'),
     path = require('path'),
     http = require('http'),
     bodyParser = require('body-parser'),
@@ -7,10 +7,6 @@ const express = require('express'),
     finalhandler = require('finalhandler'),
     fs = require('fs'),
     config = require('config');
-
-const helpers = require('./helpers'),
-    db = require('./db-manager'),
-    nsp = require('./nsp-manager');
 
 
 var server = http.createServer(function (request, response) {
