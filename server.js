@@ -99,7 +99,7 @@ exports.socketEmit = (eventName, eventData, room) => {
     io.in(room).emit(eventName, eventData);
 };
 
-var port = process.env.PORT || 1337;
+var port = process.env.PORT || config.server.port;
 
 server.listen(port, function listening() {
     console.log('\t  listening...');
